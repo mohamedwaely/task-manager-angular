@@ -1,6 +1,25 @@
 # TaskManager
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+TaskManager is a modern web application built with Angular that enables users to manage their tasks with a slick. It supports secure authentication and real-time task management including creation, updates, status management, and deletion.
+
+## Features
+
+- **User Authentication:** Register and log in with token-based security.
+- **Task CRUD Operations:** Create, read, update, and delete tasks seamlessly.
+- **Multi-line Descriptions:** Write detailed task descriptions with automatic line breaks.
+- **Status Tracking:** Change task status easily with radio button selections.
+- **Real-time Updates:** Instant reflection of changes in tasks.
+
+## ScreenShots
+### Register Page
+<img width="1116" height="823" alt="register" src="https://github.com/user-attachments/assets/104e7133-a9d8-4238-bc21-05bdde5700df" />
+
+### Login Page
+<img width="1112" height="821" alt="login (2)" src="https://github.com/user-attachments/assets/82952686-4587-4dd6-9768-12390cfe0ee3" />
+
+### Dashboard Page
+<img width="1101" height="807" alt="dashborad" src="https://github.com/user-attachments/assets/e5b832a5-1b44-4174-8c3d-47b01bb6445b" />
+
 
 ## Development server
 
