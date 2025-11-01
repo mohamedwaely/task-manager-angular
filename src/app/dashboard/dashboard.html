@@ -1,0 +1,59 @@
+<div class="task-list-container">
+  <div class="task-list-header">
+    <button class="add-btn" (click)="addTask()">+</button>
+    <button class="logout-btn" (click)="logout()">Logout</button>
+  </div>
+  <div *ngFor="let task of tasks" class="task-item">
+    <button class="delete-btn" (click)="deleteTask(task.taskId)">x</button>
+    <div class="task-details">
+      <!-- <input
+        [(ngModel)]="task.description"
+        (change)="updateTaskDesc(task)"
+        placeholder="Description"
+        class="task-description" /> -->
+        <textarea
+            [(ngModel)]="task.description"
+            (change)="updateTaskDesc(task)"
+            placeholder="Description"
+            class="task-description"
+            rows="1"
+        ></textarea>
+      <div class="task-status-group">
+        <label>
+            <input 
+            type="radio" 
+            name="status-{{task.taskId}}" 
+            [(ngModel)]="task.status" 
+            [value]="'new'"
+            (change)="updateTaskStatus(task)" 
+            />
+            New
+        </label>
+
+        <label>
+            <input 
+            type="radio" 
+            name="status-{{task.taskId}}" 
+            [(ngModel)]="task.status" 
+            [value]="'inprogress'" 
+            (change)="updateTaskStatus(task)" 
+            />
+            In Progress
+        </label>
+
+        <label>
+            <input 
+            type="radio" 
+            name="status-{{task.taskId}}" 
+            [(ngModel)]="task.status" 
+            [value]="'completed'" 
+            (change)="updateTaskStatus(task)" 
+            />
+            Completed
+        </label>
+    </div>
+
+      <div class="created-at">Created: {{ task.createdAt | date:'short' }}</div>
+    </div>
+  </div>
+</div>
